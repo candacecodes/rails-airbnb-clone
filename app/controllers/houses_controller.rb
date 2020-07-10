@@ -5,19 +5,19 @@ class HousesController < ApplicationController
         @houses = House.all
 
         if params[:bedrooms]
-            @house = House.where('bedrooms LIKE ?', "%#{params[:bedrooms]}%")
+            @house = House.where('bedrooms >= ?', "#{params[:bedrooms]}")
         elsif params[:bathrooms]
-            @house = House.where('bathrooms LIKE ?', "%#{params[:bathrooms]}%")
+            @house = House.where('bathrooms >= ?', "#{params[:bathrooms]}")
         elsif params[:parking]
-            @house = House.where('parking LIKE ?', "%#{params[:parking]}%")
+            @house = House.where('parking >= ?', "#{params[:parking]}")
         elsif params[:guest_limit]
-            @house = House.where('guest_limit LIKE ?', "%#{params[:guest_limit]}%")
+            @house = House.where('guest_limit >= ?', "#{params[:guest_limit]}")
         elsif params[:pet_friendly]
-            @house = House.where('pet_friendly LIKE ?', "%#{params[:pet_friendly]}%")
+            @house = House.where('pet_friendly LIKE ?', "#{params[:pet_friendly]}")
         elsif params[:house_type]
-            @house = House.where('house_type LIKE ?', "%#{params[:house_type]}%")
+            @house = House.where('house_type LIKE ?', "#{params[:house_type]}")
         elsif params[:cost_per_day]
-            @house = House.where('cost_per_day WHERE cost_per_day < ?', "%#{params[:cost_per_day]}%")
+            @house = House.where('cost_per_day <= ?', "#{params[:cost_per_day]}")
         else
             @house = House.all
         end

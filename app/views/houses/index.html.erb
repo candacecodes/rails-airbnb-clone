@@ -1,51 +1,57 @@
 <h1>House Index</h1>
 
-<h4> Search by Bedrooms</h4>
+<h4>Search By: </h4>
+Minimum Bedrooms
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :bedrooms, params[:bedrooms] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-  <h4> Search by Bathrooms</h4>
+Minimum Bathrooms
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :bathrooms, params[:bathrooms] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-   <h4> Search by Number of Parking Spots</h4>
+Minimum Number of Parking Spots
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :parking, params[:parking] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-   <h4> Search by Guest Capacity</h4>
+Minimum Guest Capacity
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :guest_limit, params[:guest_limit] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-   <h4> Search for Stays that are Pet Friendly</h4>
+Pet Friendly<br>(true = 1 /false = 0)
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :pet_friendly, params[:pet_friendly] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-
-
-   <h4> Search by House Type</h4>
+House Type
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :house_type, params[:house_type] %>
       <%= submit_tag ("Search") %>
    <% end %>
-
-   <h4> Search by Cost per Day</h4>
+Maximum Cost per Day
    <%= form_tag(houses_path, method: :get) do %>
       <%= text_field_tag :cost_per_day, params[:cost_per_day] %>
       <%= submit_tag ("Search") %>
    <% end %>
+<br>
+
+
 
    <% @house.map do |house| %>
-      <ul>
-        <li><%= link_to house.address, house_path(house) %></li><br>
-     </ul>
+      <div class="card-deck">
+         <div class="card">
+            <img src="<%= house.img_url %>" class="card-img-top" alt="pic of house">
+            <div class="card-body">
+               <h5 class="card-title">Address: <%= house.address %></h5>
+               <p class="card-text">Bedrooms: <%= house.bedrooms %></p>
+               <p class="card-text">Bathrooms: <%= house.bathrooms %></p>
+               <p class="card-text">Capacity: <%= house.guest_limit %></p>
+               <p class="card-text">Cost Per Day: $<%= house.cost_per_day %></p>
+               <a href="<%= house_path house.id %>" class="btn btn-primary">View Stay</a>
+            </div>
+         </div>
+      </div>      
   <% end %>

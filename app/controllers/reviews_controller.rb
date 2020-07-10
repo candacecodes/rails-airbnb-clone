@@ -6,7 +6,6 @@ class ReviewsController < ApplicationController
     
     def create
         @review = Review.new(review_params)
-        byebug
         if @review.save
             redirect_to guest_path(@review.guest_id)
         else

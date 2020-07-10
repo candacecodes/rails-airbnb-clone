@@ -1,20 +1,24 @@
 <h1>House Show</h1>
 
-<h4>Address: <%= @house.address %> </h4>
+<div class="card mb-3">
+         <img src="<%= @house.img_url %>" class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title"><%= @house.address %></h5>
+            <p class="card-text">Bedrooms: <%= @house.bedrooms %></p>
+            <p class="card-text">Bathrooms: <%= @house.bathrooms %></p>
+            <p class="card-text">Capacity: <%= @house.guest_limit %></p>
+            <p class="card-text">Cost Per Day: $<%= @house.cost_per_day %></p>
+            <p class="card-text">Parking Spots: <%= @house.parking %></p>
+            <p class="card-text">Pet Friendly: <%= @house.pet_friendly %></p>
+            <p class="card-text">House Type: <%= @house.house_type %></p>
 
-<img src="<%= @house.img_url %>" alt="<% @house.address %>">
+            <% if !!session[:guest] %>
+            <a href="<%= new_reservation_path %>" class="btn btn-primary">Make Reservation</a>
+            <% elsif !!session[:host] %>
+            <a href="<%= host_path(@house.host_id) %>" class="btn btn-primary">Host Index</a>
+            <% end %>
+            
+         </div>
+      </div>
 
-
-<h4>Beds: <%= @house.bedrooms %> </h4>
-<h4>Baths: <%= @house.bathrooms %> </h4>
-<h4>Parking Spots: <%= @house.parking %> </h4>
-<h4>Room for: <%= @house.guest_limit %> </h4>
-<h4>Pet Friendly? <%= @house.pet_friendly %> </h4>
-<h4>House Type: <%= @house.house_type %> </h4>
-<h4>Cost per night: $ <%= @house.cost_per_day %> </h4>
-
-<% if !!session[:guest] %>
-<%= link_to "Make Reservation", new_reservation_path, method: :get %>
-<% elsif !!session[:host] %>
-<%= link_to "Host Index", host_path(@house.host_id) %>
-<% end %>
+      

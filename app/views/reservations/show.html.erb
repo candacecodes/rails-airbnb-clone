@@ -1,11 +1,12 @@
 <h1>Reservation Show</h1>
 
-<h4>Number of Guests: <%= @reservation.number_of_guests %> </h4>
-<h4>Start Date: <%= @reservation.reservation_start_date %> </h4>
-<h4>End Date: <%= @reservation.reservation_end_date %> </h4>
-
+<b>Reservation Number: <%= @reservation.id %></b><br>
+    Number of Guests: <%= @reservation.number_of_guests %><br> 
+    Starting Date: <%= @reservation.reservation_start_date %><br>    
+    Ending Date: <%= @reservation.reservation_end_date %><br><br>
+    
 <%= button_to "Edit", edit_reservation_path, method: :get %>
 
-<%= button_to "Delete", reservation_path, method: :delete %><br>    
+<%= button_to "Delete", reservation_path, method: :delete %>    
 
 <%= button_to "Leave Review", new_review_path, method: :get %>
