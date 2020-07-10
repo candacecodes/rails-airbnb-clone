@@ -13,7 +13,25 @@
   <body>
     <nav class="navbar navbar-dark bg-dark">
       <span class="navbar-brand mb-0 h1">Airvnv</span>
+      <a class="btn btn-primary " href="<%= login_path %>" role="button">Login</a>
+      <a class="btn btn-primary" href="<%= logout_path %>" role="button">Logout</a>
+      
+      <a class="btn btn-primary" href="<%= new_guest_path %>" role="button">Sign Up As Guest</a>
+      <a class="btn btn-primary" href="<%= new_host_path %>" role="button">Sign Up As Host</a>
     </nav>
     <%= yield %>
   </body>
 </html>
+
+<style>
+
+body {
+ background-image: url("https://i.giphy.com/media/UqqVRaP8y4uo1GNxbN/giphy.webp");
+ background-color: #696969;
+ background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+</style>

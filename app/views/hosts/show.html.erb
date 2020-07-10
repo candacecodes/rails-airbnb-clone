@@ -2,17 +2,15 @@
 
 <h3>Host Name: <%= @host.to_s %></h3>
 
-
 <h5><%= link_to "Add a house", new_house_path %></h5><br>
 
 <h3>Your Houses:</h3>
 <% @host.houses.each do |house| %>
-    <%= link_to house.address, house_path(house) %>
-    <%= button_to "Edit",  edit_house_path(house), method: :get %>    
-    <%= button_to "Delete",  house_path(house), method: :delete %><br>  
-    
+    <div class="card" style="width: 30rem; background-color: #DCDCDC;">
+        <div class="card-body">
+        <%= link_to house.address, house_path(house) %><br><br>
+        <%= button_to "Edit",  edit_house_path(house), method: :get %>    
+        <%= button_to "Delete",  house_path(house), method: :delete %>   
+        </div>
+    </div>
 <% end %> 
-
-<%= button_to "Log Out", logout_path, method: :get %><br>
-
-

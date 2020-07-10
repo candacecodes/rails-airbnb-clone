@@ -2,13 +2,17 @@
 <h3>Name: <%= @guest.to_s%> </h3>
 <h4>Your Reservations:</h4><br>
 <% @guest.reservations.each do |reservation| %>
-    <b>Reservation Number: <%= link_to reservation.id, reservation_path(reservation) %></b>
-    <% if reservation.house %><br>
-        <%= reservation.house.address %>
-    <% end %><br>   
-    Starting Date: <%= reservation.reservation_start_date %><br>    
-    Ending Date: <%= reservation.reservation_end_date %><br><br>  
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+        <b>Reservation Number: <%= link_to reservation.id, reservation_path(reservation) %></b>
+        <% if reservation.house %><br>
+            <%= reservation.house.address %>
+        <% end %><br>   
+        Starting Date: <%= reservation.reservation_start_date %><br>    
+        Ending Date: <%= reservation.reservation_end_date %><br><br> 
+        </div>
+    </div>
+ 
 <% end %>
-<%= link_to "Search for Houses", houses_path %>
-<br><br>
-<%= button_to "Log Out", logout_path, method: :get %><br>
+<h4><%= link_to "Search for Houses", houses_path %></h4>
+

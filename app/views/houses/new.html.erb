@@ -2,31 +2,31 @@
 
 <%= flash[:message] %> 
 <%= form_for @house do |f| %>
-    <%= f.label "Address: " %>
+    <b><%= f.label "Address: " %></b>
     <%= f.text_field :address %> <br><br>
 
-    <%= f.label "Beds: " %>
+    <b><%= f.label "Beds: " %></b>
     <%= f.text_field :bedrooms %><br><br>
 
-    <%= f.label "Baths: " %>
+    <b><%= f.label "Baths: " %></b>
     <%= f.text_field :bathrooms %><br><br>
 
-    <%= f.label "Parking spots: " %>
+    <b><%= f.label "Parking spots: " %></b>
     <%= f.text_field :parking %><br><br>
 
-    <%= f.label "Room for: " %>
+    <b><%= f.label "Room for: " %></b>
     <%= f.text_field :guest_limit %><br><br>
     
-    <%= f.label "Pet friendly? (true/false) " %>
+    <b><%= f.label "Pet friendly? (true/false) " %></b>
     <%= f.text_field :pet_friendly %><br><br>   
 
-    <%= f.label "House Type: " %>
+    <b><%= f.label "House Type: " %></b>
     <%= f.text_field :house_type %><br><br>
 
-    <%= f.label "Cost Per Day: " %>
+    <b><%= f.label "Cost Per Day: " %></b>
     <%= f.text_field :cost_per_day %><br><br>
     
-    <%= f.label "Image URL: " %>
+    <b><%= f.label "Image URL: " %></b>
     <%= f.text_field :img_url %><br><br> 
     
     <%= f.hidden_field :host_id, value: session[:host] %>
