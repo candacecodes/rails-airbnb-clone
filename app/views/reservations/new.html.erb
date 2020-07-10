@@ -1,0 +1,18 @@
+<h1>New Reservation</h1>
+
+<%= flash[:message] %> 
+<%= form_for @reservation do |f| %>
+    <%= f.label "Number of Guests: " %>
+    <%= f.text_field :number_of_guests %> <br><br>
+
+    <%= f.label "Start Date: " %>
+    <%= f.text_field :reservation_start_date %><br><br>
+
+    <%= f.label "End Date: " %>
+    <%= f.text_field :reservation_end_date %><br><br>
+
+    <%= f.hidden_field :guest_id, value: session[:guest] %>
+    <%= f.hidden_field :house_id, value: session[:house] %>
+
+<%= f.submit %>
+<% end %>

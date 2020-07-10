@@ -1,0 +1,51 @@
+<h1>House Index</h1>
+
+<h4> Search by Bedrooms</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :bedrooms, params[:bedrooms] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+  <h4> Search by Bathrooms</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :bathrooms, params[:bathrooms] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+   <h4> Search by Number of Parking Spots</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :parking, params[:parking] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+   <h4> Search by Guest Capacity</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :guest_limit, params[:guest_limit] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+   <h4> Search for Stays that are Pet Friendly</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :pet_friendly, params[:pet_friendly] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+
+
+   <h4> Search by House Type</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :house_type, params[:house_type] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+   <h4> Search by Cost per Day</h4>
+   <%= form_tag(houses_path, method: :get) do %>
+      <%= text_field_tag :cost_per_day, params[:cost_per_day] %>
+      <%= submit_tag ("Search") %>
+   <% end %>
+
+   <% @house.map do |house| %>
+      <ul>
+        <li><%= link_to house.address, house_path(house) %></li><br>
+     </ul>
+  <% end %>

@@ -1,0 +1,36 @@
+<h1>Edit House</h1>
+
+<%= flash[:message] %> 
+<%= form_for @house do |f| %>
+    <%= f.label "Address: " %>
+    <%= f.text_field :address %> <br><br>
+
+    <%= f.label "Beds: " %>
+    <%= f.text_field :bedrooms %><br><br>
+
+    <%= f.label "Baths: " %>
+    <%= f.text_field :bathrooms %><br><br>
+
+    <%= f.label "Parking spots: " %>
+    <%= f.text_field :parking %><br><br>
+
+    <%= f.label "Room for: " %>
+    <%= f.text_field :guest_limit %><br><br>
+    
+    <%= f.label "Pet friendly? " %>
+    <%= f.text_field :pet_friendly %><br><br>   
+
+    <%= f.label "House Type: " %>
+    <%= f.text_field :house_type %><br><br>
+
+    <%= f.label "Host ID: " %>
+    <%= f.text_field :host_id %><br><br>
+
+    <%= f.label "Cost Per Day: " %>
+    <%= f.text_field :cost_per_day %><br><br>
+
+    <%= f.label "Image URL: " %>
+    <%= f.text_field :img_url %><br><br> 
+    
+<%= f.submit %>
+<% end %>

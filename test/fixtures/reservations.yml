@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_of_guests: 1
+  reservation_start_date: 2020-07-07
+  reservation_end_date: 2020-07-07
+  guest_id: 1
+  host_id: 1
+  house_id: 1
+
+two:
+  number_of_guests: 1
+  reservation_start_date: 2020-07-07
+  reservation_end_date: 2020-07-07
+  guest_id: 1
+  host_id: 1
+  house_id: 1

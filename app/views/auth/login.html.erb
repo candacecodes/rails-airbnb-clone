@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<div class="main">
+<%= flash[:message] %> 
+<%= form_for :auth do |f| %> 
+<%= f.text_field :first_name %> 
+<%= f.submit "Login" %> 
+<% end %> 
+
+<%= button_to "Sign Up as Guest", new_guest_path, method: :get %>
+<%= button_to "Sign Up as Host", new_host_path, method: :get %>
+
+</div>

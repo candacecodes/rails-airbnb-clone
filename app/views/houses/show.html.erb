@@ -1,0 +1,20 @@
+<h1>House Show</h1>
+
+<h4>Address: <%= @house.address %> </h4>
+
+<img src="<%= @house.img_url %>" alt="<% @house.address %>">
+
+
+<h4>Beds: <%= @house.bedrooms %> </h4>
+<h4>Baths: <%= @house.bathrooms %> </h4>
+<h4>Parking Spots: <%= @house.parking %> </h4>
+<h4>Room for: <%= @house.guest_limit %> </h4>
+<h4>Pet Friendly? <%= @house.pet_friendly %> </h4>
+<h4>House Type: <%= @house.house_type %> </h4>
+<h4>Cost per night: $ <%= @house.cost_per_day %> </h4>
+
+<% if !!session[:guest] %>
+<%= link_to "Make Reservation", new_reservation_path, method: :get %>
+<% elsif !!session[:host] %>
+<%= link_to "Host Index", host_path(@house.host_id) %>
+<% end %>

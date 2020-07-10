@@ -1,0 +1,15 @@
+<h1>Host Show</h1>
+
+<h3><%= @host.to_s %></h3>
+<%= button_to "Log Out", logout_path, method: :get %><br>
+
+<h3><%= link_to "Add a house", new_house_path %></h3>
+
+<% @host.houses.each do |house| %>
+    <%= link_to house.address, house_path(house) %>
+
+    <%= button_to "Edit",  edit_house_path(house), method: :get %>
+    
+    <%= button_to "Delete",  house_path(house), method: :delete %><br>    
+    
+<% end %>     
