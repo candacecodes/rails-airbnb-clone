@@ -24,7 +24,7 @@ Please make sure to update tests as appropriate.
 
 Time to finish project: 4 days. 
 
-Contributed: Backend database done by me, frontend design done by Josh. Worked together on the remainder of the project. About 50/50 time and responsibility delegation. Positive experience working with Josh.
+Contributed: Backend database done by me, frontend design done by Josh. Worked together on the remainder of the project. About 50/50 time and responsibility delegation. Positive experience coding with Josh.
 
 Coding experience: 5 weeks learning backend and frontend development. No prior experience. Learned Rails. 
 
