@@ -1,24 +1,32 @@
-# README
+## Chaotic Rails Air BnB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+Use the package manager install gems and example seeds.
 
-* Ruby version
+Cd into backend, install gems, set seeds using: cd jsback, bundle install, rails db:migrate, rails db:seed, rails s 
 
-* System dependencies
+Localhost:3000
 
-* Configuration
+## Usage 
+Inspired by Air BNB 
 
-* Database creation
+## Contributing
 
-* Database initialization
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* How to run the test suite
+Please make sure to update tests as appropriate.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Thanks 
 
-* Deployment instructions
+Thank you to Josh for being an awesome partner with this project. 
 
-* ...
+## Details 
+
+Time to finish project: 4 days.
+
+Coding experience: 15 weeks learning backend and frontend development. No prior experience. Learned Rails. 
+
+Project motivated by: Class project. AirBNB setup was complex enough to be an interesting project. 
+
+// @candacecodes 082920 
