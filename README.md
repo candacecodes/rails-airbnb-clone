@@ -30,6 +30,6 @@ Coding experience: 5 weeks learning backend and frontend development. No prior e
 Project motivated by: Class project. AirBNB setup was complex enough to be an interesting project. 
 
 
-Forked from original code, @joshlorenc1, my partner for this project. 
+Forked from original code, @jlorenc1, my partner for this project. 
 
 // @candacecodes 
