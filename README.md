@@ -1,4 +1,4 @@
-## Chaotic Rails Air BnB
+## Air BnB
 
 ## Installation
 
