@@ -27,7 +27,7 @@ Contributed: Backend database done by me, frontend design done by partner. Worke
 
 Coding experience: 5 weeks learning backend and frontend development. No prior experience. Learned Rails. 
 
-Project motivated by: Class project. AirBNB setup was complex enough to be an interesting project. 
+Project motivated by: Class project 
 
 
 Forked from original code, @jlorenc1, my partner for this project. 
